@@ -1,0 +1,12 @@
+==== node v14.17.4 ====
+==== angular v 9.1.3 ===
+==== PHP v7.3.0 =====
+
+
+====================== configuracion adicional en "package.json" para solucionar errores de depencias =================
+
+"jasmine-core": "~3.8.0",
+"karma-jasmine-html-reporter": "^1.5.2",
+
+
+luego ejecutar npm install dentro del proyecto en la cmd

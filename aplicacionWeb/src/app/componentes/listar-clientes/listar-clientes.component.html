@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        Clientes
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>DNI</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of Clientes; let iControl=index">
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.dni}}</td>
+                    <td>{{cliente.edad}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    
+</div>

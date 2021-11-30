@@ -1,0 +1,79 @@
+
+<div class="card">
+    <div class="card-header">
+        Agregar Cliente
+    </div>
+    <div class="card-body">
+        
+        <form [formGroup]="formularioClientes"(ngSubmit)="enviarDatos()">
+            <!-- input name-->
+            <div class="mb-3">
+              <label for="" class="form-label"> Nombre</label>
+              <input type="text"
+                class="form-control"  name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Ingresa tu nombre">
+              
+              <div class="alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div class="container-error-message"> 
+                  solo use mayusculas o minusculas
+                </div>
+              </div>
+                
+            </div>
+            
+            <!-- input lastName-->
+            <div class="mb-3">
+                <label for="" class="form-label"> Apellido</label>
+                <input type="text"
+                  class="form-control" [class.is-danger]="formularioClientes.get('apellido').dirty && formularioClientes.get('apellido').invalid" name="" formControlName="apellido" id="" aria-describedby="helpId" placeholder="Ingresa tu apellido">
+
+                  <div class="alert-danger" *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)">
+                    <div class="container-error-message"> 
+                      solo use mayusculas o minusculas
+                    </div>
+                  </div>  
+
+            </div>
+            <!-- input Email-->
+            <div class="mb-3">
+                <label for="" class="form-label"> Email</label>
+                <input type="email"
+                  class="form-control"  name="" formControlName="email" id="" aria-describedby="helpId" placeholder="Ingresa tu email">
+            
+                  <div class="alert-danger" *ngIf="email.invalid && email.errors.pattern && (email.dirty || email.touched)">
+                    <div class="container-error-message"> 
+                      Correo Invalido
+                      ejemplo de correo valido: ejemplo@gmail.com
+                    </div>
+                  </div> 
+
+            </div>
+              <!-- input DNI   -->
+            <div class="mb-3">
+                <label for="" class="form-label"> DNI</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="dni" id="" aria-describedby="helpId" placeholder="Ingresa tu dni">
+            </div>
+            <!-- input date of birth   -->
+            <div class="mb-3">
+                <label for="" class="form-label"> Fecha nacimiento</label>
+                <input type="date"
+                  class="form-control" name="" formControlName="fechaNac" id="" aria-describedby="helpId" placeholder="Ingresa tu fecha de nacimiento">
+            </div>
+             <!-- input edad   -->
+             <div class="mb-3">
+                <label for="" class="form-label"> Edad</label>
+                <input type="number"
+                  class="form-control" name="" formControlName="edad" id="" aria-describedby="helpId" placeholder="Ingresa tu edad">
+            </div>
+
+            <!-- botones   -->
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-primary">Cancelar</button>
+                
+            </div>
+            
+        </form>
+    </div>
+    
+</div>
